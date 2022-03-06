@@ -1,0 +1,11 @@
+version: "2.2.3"
+services:
+  web:
+    build: . 
+    image : zahraahnd/road-lane-detection:1.0
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: development
