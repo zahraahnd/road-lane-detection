@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+        <div class="header">
+            <h3 class="text-muted">Road Lane Detection</h3>
+        </div>
+        <div class="jumbotron">
+            <div class="card" style="width: 50rem;">
+                <div class="card-body">
+                    <h5 class="card-title mb-3 mt-3"></h5>
+                    <p class="card-text">Upload Your Image (jpg/jpeg extension)</p>
+
+                    <form action="{{ url_for('index') }}" method="POST" enctype="multipart/form-data">
+                      <div class="input-group">
+                        <input type="file" class="form-control" name="image" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
